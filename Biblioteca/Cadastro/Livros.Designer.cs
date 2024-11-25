@@ -36,13 +36,14 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtClassificação = new System.Windows.Forms.TextBox();
+            this.txtClassificaçao = new System.Windows.Forms.TextBox();
             this.txtNumPag = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAnoPubli = new System.Windows.Forms.TextBox();
+            this.btnExcluirLivro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -53,6 +54,7 @@ namespace Biblioteca.Cadastro
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
@@ -103,12 +105,12 @@ namespace Biblioteca.Cadastro
             this.txtGenero.Size = new System.Drawing.Size(131, 20);
             this.txtGenero.TabIndex = 6;
             // 
-            // txtClassificação
+            // txtClassificaçao
             // 
-            this.txtClassificação.Location = new System.Drawing.Point(75, 201);
-            this.txtClassificação.Name = "txtClassificação";
-            this.txtClassificação.Size = new System.Drawing.Size(131, 20);
-            this.txtClassificação.TabIndex = 7;
+            this.txtClassificaçao.Location = new System.Drawing.Point(75, 201);
+            this.txtClassificaçao.Name = "txtClassificaçao";
+            this.txtClassificaçao.Size = new System.Drawing.Size(131, 20);
+            this.txtClassificaçao.TabIndex = 7;
             // 
             // txtNumPag
             // 
@@ -160,18 +162,29 @@ namespace Biblioteca.Cadastro
             this.txtAnoPubli.Size = new System.Drawing.Size(131, 20);
             this.txtAnoPubli.TabIndex = 13;
             // 
+            // btnExcluirLivro
+            // 
+            this.btnExcluirLivro.Location = new System.Drawing.Point(75, 380);
+            this.btnExcluirLivro.Name = "btnExcluirLivro";
+            this.btnExcluirLivro.Size = new System.Drawing.Size(115, 23);
+            this.btnExcluirLivro.TabIndex = 14;
+            this.btnExcluirLivro.Text = "Excluir";
+            this.btnExcluirLivro.UseVisualStyleBackColor = true;
+            this.btnExcluirLivro.Click += new System.EventHandler(this.btnExcluirLivro_Click);
+            // 
             // Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 450);
+            this.Controls.Add(this.btnExcluirLivro);
             this.Controls.Add(this.txtAnoPubli);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNumPag);
-            this.Controls.Add(this.txtClassificação);
+            this.Controls.Add(this.txtClassificaçao);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNomeAutor);
@@ -195,12 +208,13 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGenero;
-        private System.Windows.Forms.TextBox txtClassificação;
+        private System.Windows.Forms.TextBox txtClassificaçao;
         private System.Windows.Forms.TextBox txtNumPag;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAnoPubli;
+        private System.Windows.Forms.Button btnExcluirLivro;
     }
 }

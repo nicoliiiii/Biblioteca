@@ -62,7 +62,7 @@ namespace Biblioteca.Forms
             // 
             // btnNovoLivro
             // 
-            this.btnNovoLivro.Location = new System.Drawing.Point(403, 110);
+            this.btnNovoLivro.Location = new System.Drawing.Point(382, 110);
             this.btnNovoLivro.Name = "btnNovoLivro";
             this.btnNovoLivro.Size = new System.Drawing.Size(151, 23);
             this.btnNovoLivro.TabIndex = 3;
