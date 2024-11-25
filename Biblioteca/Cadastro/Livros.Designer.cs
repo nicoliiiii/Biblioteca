@@ -36,7 +36,7 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
-            this.txtClassificaçao = new System.Windows.Forms.TextBox();
+            this.txtClassificacao = new System.Windows.Forms.TextBox();
             this.txtNumPag = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -105,12 +105,12 @@ namespace Biblioteca.Cadastro
             this.txtGenero.Size = new System.Drawing.Size(131, 20);
             this.txtGenero.TabIndex = 6;
             // 
-            // txtClassificaçao
+            // txtClassificacao
             // 
-            this.txtClassificaçao.Location = new System.Drawing.Point(75, 201);
-            this.txtClassificaçao.Name = "txtClassificaçao";
-            this.txtClassificaçao.Size = new System.Drawing.Size(131, 20);
-            this.txtClassificaçao.TabIndex = 7;
+            this.txtClassificacao.Location = new System.Drawing.Point(75, 201);
+            this.txtClassificacao.Name = "txtClassificacao";
+            this.txtClassificacao.Size = new System.Drawing.Size(131, 20);
+            this.txtClassificacao.TabIndex = 7;
             // 
             // txtNumPag
             // 
@@ -184,7 +184,7 @@ namespace Biblioteca.Cadastro
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNumPag);
-            this.Controls.Add(this.txtClassificaçao);
+            this.Controls.Add(this.txtClassificacao);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNomeAutor);
@@ -208,7 +208,7 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGenero;
-        private System.Windows.Forms.TextBox txtClassificaçao;
+        private System.Windows.Forms.TextBox txtClassificacao;
         private System.Windows.Forms.TextBox txtNumPag;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

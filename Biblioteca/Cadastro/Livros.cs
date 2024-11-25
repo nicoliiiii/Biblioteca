@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,10 @@ namespace Biblioteca.Cadastro
 {
     public partial class Livros : Form
     {
+        private string LinhaConexao = "Server=localhost;Database=Biblioteca;Uid=root;Pwd=;";
+        private MySqlConnection Conexao;
+
+        //
         public Livros()
         {
             InitializeComponent();
@@ -26,7 +32,7 @@ namespace Biblioteca.Cadastro
             txtTituloLivro.Text = "";
             txtNomeAutor.Text = "";
             txtGenero.Text = "";
-            txtClassificaçao.Text = "";
+            txtClassificacao.Text = "";
             txtNumPag.Text = "";
             txtAnoPubli.Text = "";
             chkDisponivel.Checked = false;
@@ -34,22 +40,26 @@ namespace Biblioteca.Cadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            string query = "insert into Livros (TituloLivro, NomeAutor, Genero,Classificaçao,NumPag,) Values (@nome, @sigla, @ativo)";
+            string query = "insert into Livros (TituloLivro, NomeAutor, Genero,Classificacao,NumPag,AnoPubli,Disponivel) Values (@titulolivro, @nomeautor, @genero, @classificacao, @numpag,@anopubli, @disponivel)";
 
-            Conexao = new SqlConnection(LinhaConexao);
+            Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
 
-            SqlCommand comando = new SqlCommand(query, Conexao);
+            MySqlCommand comando = new MySqlCommand(query, Conexao);
 
-            comando.Parameters.Add(new SqlParameter("@sigla", txtNomeDisciplina.Text));
-            comando.Parameters.Add(new SqlParameter("@nome", txtNomeDisciplina.Text));
-            comando.Parameters.Add(new SqlParameter("@ativo", chkCadastro.Checked));
+            comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
+            comando.Parameters.Add(new MySqlParameter("@nomeautor", txtNomeAutor.Text));
+            comando.Parameters.Add(new MySqlParameter("@genero", txtGenero.Text));
+            comando.Parameters.Add(new MySqlParameter("@classificacao", txtClassificacao.Text));
+            comando.Parameters.Add(new MySqlParameter("@numpag", txtNumPag.Text));
+            comando.Parameters.Add(new MySqlParameter("@anopubli", txtAnoPubli.Text));
+            comando.Parameters.Add(new MySqlParameter("@disponivel", chkDisponivel.Checked));
 
             int resposta = comando.ExecuteNonQuery();
 
             if (resposta == 1)
             {
-                MessageBox.Show("Disciplina Atualizada com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Livro Atualizado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
