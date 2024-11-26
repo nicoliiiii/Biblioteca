@@ -69,6 +69,7 @@ namespace Biblioteca.Forms
             this.btnNovoLivro.TabIndex = 3;
             this.btnNovoLivro.Text = "Adicionar novo Livro";
             this.btnNovoLivro.UseVisualStyleBackColor = true;
+            this.btnNovoLivro.Click += new System.EventHandler(this.btnNovoLivro_Click);
             // 
             // frmLivros
             // 

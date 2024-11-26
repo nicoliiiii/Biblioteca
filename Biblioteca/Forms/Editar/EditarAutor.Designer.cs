@@ -61,6 +61,7 @@ namespace Biblioteca.Forms.Editar
             this.btnSalvarAutor.TabIndex = 2;
             this.btnSalvarAutor.Text = "Salvar";
             this.btnSalvarAutor.UseVisualStyleBackColor = true;
+            this.btnSalvarAutor.Click += new System.EventHandler(this.btnSalvarAutor_Click);
             // 
             // txtTituloLivro
             // 
@@ -86,6 +87,7 @@ namespace Biblioteca.Forms.Editar
             this.btnExcluirAutor.TabIndex = 5;
             this.btnExcluirAutor.Text = "Excluir";
             this.btnExcluirAutor.UseVisualStyleBackColor = true;
+            this.btnExcluirAutor.Click += new System.EventHandler(this.btnExcluirAutor_Click);
             // 
             // EditarAutor
             // 

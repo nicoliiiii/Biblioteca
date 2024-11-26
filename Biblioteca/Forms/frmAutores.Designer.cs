@@ -29,20 +29,21 @@ namespace Biblioteca.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtGridAutor = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btnNovoAutor = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridAutor)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtGridAutor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 154);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(723, 284);
-            this.dataGridView1.TabIndex = 0;
+            this.dtGridAutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridAutor.Location = new System.Drawing.Point(12, 154);
+            this.dtGridAutor.Name = "dtGridAutor";
+            this.dtGridAutor.Size = new System.Drawing.Size(723, 284);
+            this.dtGridAutor.TabIndex = 0;
+            this.dtGridAutor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridAutor_CellContentClick);
             // 
             // label1
             // 
@@ -68,6 +69,7 @@ namespace Biblioteca.Forms
             this.btnNovoAutor.TabIndex = 3;
             this.btnNovoAutor.Text = "Adicionar novo Autor(a)";
             this.btnNovoAutor.UseVisualStyleBackColor = true;
+            this.btnNovoAutor.Click += new System.EventHandler(this.btnNovoAutor_Click);
             // 
             // frmAutores
             // 
@@ -77,10 +79,10 @@ namespace Biblioteca.Forms
             this.Controls.Add(this.btnNovoAutor);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtGridAutor);
             this.Name = "frmAutores";
             this.Text = "frmAutores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridAutor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,7 +90,7 @@ namespace Biblioteca.Forms
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridAutor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Button btnNovoAutor;
