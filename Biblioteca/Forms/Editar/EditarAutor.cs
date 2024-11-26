@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Biblioteca.Forms.Editar
 {
     public partial class EditarAutor : Form
     {
-        public EditarAutor()
+        private string LinhaConexao = "Server=localhost;Database=Biblioteca;Uid=root;Pwd=;";
+        private MySqlConnection Conexao;
+        public EditarAutor(string NomeAutor)
         {
             InitializeComponent();
         }
+
     }
 }

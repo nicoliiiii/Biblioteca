@@ -43,7 +43,6 @@ namespace Biblioteca.Cadastro
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAnoPubli = new System.Windows.Forms.TextBox();
-            this.btnExcluirLivro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -162,22 +161,11 @@ namespace Biblioteca.Cadastro
             this.txtAnoPubli.Size = new System.Drawing.Size(131, 20);
             this.txtAnoPubli.TabIndex = 13;
             // 
-            // btnExcluirLivro
-            // 
-            this.btnExcluirLivro.Location = new System.Drawing.Point(75, 380);
-            this.btnExcluirLivro.Name = "btnExcluirLivro";
-            this.btnExcluirLivro.Size = new System.Drawing.Size(115, 23);
-            this.btnExcluirLivro.TabIndex = 14;
-            this.btnExcluirLivro.Text = "Excluir";
-            this.btnExcluirLivro.UseVisualStyleBackColor = true;
-            this.btnExcluirLivro.Click += new System.EventHandler(this.btnExcluirLivro_Click);
-            // 
             // Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 450);
-            this.Controls.Add(this.btnExcluirLivro);
             this.Controls.Add(this.txtAnoPubli);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -215,6 +203,5 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAnoPubli;
-        private System.Windows.Forms.Button btnExcluirLivro;
     }
 }

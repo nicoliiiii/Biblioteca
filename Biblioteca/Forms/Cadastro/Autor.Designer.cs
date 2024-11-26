@@ -34,7 +34,6 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.txtTituloLivro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnExcluirAutor = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -79,22 +78,11 @@ namespace Biblioteca.Cadastro
             this.label2.TabIndex = 4;
             this.label2.Text = "Titulo do Livro";
             // 
-            // btnExcluirAutor
-            // 
-            this.btnExcluirAutor.Location = new System.Drawing.Point(37, 201);
-            this.btnExcluirAutor.Name = "btnExcluirAutor";
-            this.btnExcluirAutor.Size = new System.Drawing.Size(100, 23);
-            this.btnExcluirAutor.TabIndex = 5;
-            this.btnExcluirAutor.Text = "Excluir";
-            this.btnExcluirAutor.UseVisualStyleBackColor = true;
-            this.btnExcluirAutor.Click += new System.EventHandler(this.btnExcluirAutor_Click);
-            // 
             // Autor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 450);
-            this.Controls.Add(this.btnExcluirAutor);
+            this.ClientSize = new System.Drawing.Size(196, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTituloLivro);
             this.Controls.Add(this.txtNomeAutor);
@@ -114,6 +102,5 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.TextBox txtTituloLivro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnExcluirAutor;
     }
 }

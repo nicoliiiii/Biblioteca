@@ -161,6 +161,9 @@
     <EmbeddedResource Include="Forms\Cadastro\Livros.resx">
       <DependentUpon>Livros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Editar\EditarAutor.resx">
+      <DependentUpon>EditarAutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAutores.resx">
       <DependentUpon>frmAutores.cs</DependentUpon>
     </EmbeddedResource>
