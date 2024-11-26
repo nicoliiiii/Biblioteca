@@ -29,20 +29,21 @@ namespace Biblioteca.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtGridLivros = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btnNovoLivro = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridLivros)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtGridLivros
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 139);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(738, 299);
-            this.dataGridView1.TabIndex = 0;
+            this.dtGridLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridLivros.Location = new System.Drawing.Point(23, 139);
+            this.dtGridLivros.Name = "dtGridLivros";
+            this.dtGridLivros.Size = new System.Drawing.Size(738, 299);
+            this.dtGridLivros.TabIndex = 0;
+            this.dtGridLivros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridLivros_CellContentClick);
             // 
             // label1
             // 
@@ -77,10 +78,10 @@ namespace Biblioteca.Forms
             this.Controls.Add(this.btnNovoLivro);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtGridLivros);
             this.Name = "frmLivros";
             this.Text = "frmLivros";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridLivros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,7 +89,7 @@ namespace Biblioteca.Forms
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridLivros;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Button btnNovoLivro;
