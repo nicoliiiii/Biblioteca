@@ -14,7 +14,7 @@ namespace Biblioteca.Cadastro
 {
     public partial class Livros : Form
     {
-        private string LinhaConexao = "Server=localhost;Database=Biblioteca;Uid=root;Pwd=;";
+        private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
 
         //

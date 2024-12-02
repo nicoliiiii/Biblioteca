@@ -13,7 +13,7 @@ namespace Biblioteca.Cadastro
 {
     public partial class Autor : Form
     {
-        private string LinhaConexao = "Server=localhost;Database=Biblioteca;Uid=root;Pwd=;";
+        private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
         public Autor()
         {
