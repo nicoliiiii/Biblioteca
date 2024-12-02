@@ -43,11 +43,13 @@ namespace Biblioteca.Cadastro
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAnoPubli = new System.Windows.Forms.TextBox();
+            this.txtLivroId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(75, 351);
+            this.btnCadastrar.Location = new System.Drawing.Point(75, 381);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(115, 23);
             this.btnCadastrar.TabIndex = 0;
@@ -58,7 +60,7 @@ namespace Biblioteca.Cadastro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 51);
+            this.label1.Location = new System.Drawing.Point(72, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 13);
             this.label1.TabIndex = 1;
@@ -66,7 +68,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtTituloLivro
             // 
-            this.txtTituloLivro.Location = new System.Drawing.Point(75, 67);
+            this.txtTituloLivro.Location = new System.Drawing.Point(75, 127);
             this.txtTituloLivro.Name = "txtTituloLivro";
             this.txtTituloLivro.Size = new System.Drawing.Size(131, 20);
             this.txtTituloLivro.TabIndex = 2;
@@ -74,7 +76,7 @@ namespace Biblioteca.Cadastro
             // chkDisponivel
             // 
             this.chkDisponivel.AutoSize = true;
-            this.chkDisponivel.Location = new System.Drawing.Point(75, 328);
+            this.chkDisponivel.Location = new System.Drawing.Point(75, 358);
             this.chkDisponivel.Name = "chkDisponivel";
             this.chkDisponivel.Size = new System.Drawing.Size(75, 17);
             this.chkDisponivel.TabIndex = 3;
@@ -83,7 +85,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtNomeAutor
             // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(75, 109);
+            this.txtNomeAutor.Location = new System.Drawing.Point(75, 176);
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.Size = new System.Drawing.Size(131, 20);
             this.txtNomeAutor.TabIndex = 4;
@@ -91,7 +93,7 @@ namespace Biblioteca.Cadastro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(72, 93);
+            this.label2.Location = new System.Drawing.Point(70, 160);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 5;
@@ -99,21 +101,21 @@ namespace Biblioteca.Cadastro
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(75, 158);
+            this.txtGenero.Location = new System.Drawing.Point(75, 215);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(131, 20);
             this.txtGenero.TabIndex = 6;
             // 
             // txtClassificacao
             // 
-            this.txtClassificacao.Location = new System.Drawing.Point(75, 201);
+            this.txtClassificacao.Location = new System.Drawing.Point(75, 254);
             this.txtClassificacao.Name = "txtClassificacao";
             this.txtClassificacao.Size = new System.Drawing.Size(131, 20);
             this.txtClassificacao.TabIndex = 7;
             // 
             // txtNumPag
             // 
-            this.txtNumPag.Location = new System.Drawing.Point(75, 243);
+            this.txtNumPag.Location = new System.Drawing.Point(75, 293);
             this.txtNumPag.Name = "txtNumPag";
             this.txtNumPag.Size = new System.Drawing.Size(131, 20);
             this.txtNumPag.TabIndex = 8;
@@ -121,7 +123,7 @@ namespace Biblioteca.Cadastro
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 142);
+            this.label3.Location = new System.Drawing.Point(72, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 9;
@@ -130,7 +132,7 @@ namespace Biblioteca.Cadastro
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(72, 185);
+            this.label4.Location = new System.Drawing.Point(72, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 13);
             this.label4.TabIndex = 10;
@@ -139,7 +141,7 @@ namespace Biblioteca.Cadastro
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 227);
+            this.label5.Location = new System.Drawing.Point(72, 277);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 13);
             this.label5.TabIndex = 11;
@@ -148,7 +150,7 @@ namespace Biblioteca.Cadastro
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(72, 276);
+            this.label6.Location = new System.Drawing.Point(72, 316);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 13);
             this.label6.TabIndex = 12;
@@ -156,16 +158,36 @@ namespace Biblioteca.Cadastro
             // 
             // txtAnoPubli
             // 
-            this.txtAnoPubli.Location = new System.Drawing.Point(75, 292);
+            this.txtAnoPubli.Location = new System.Drawing.Point(75, 332);
             this.txtAnoPubli.Name = "txtAnoPubli";
             this.txtAnoPubli.Size = new System.Drawing.Size(131, 20);
             this.txtAnoPubli.TabIndex = 13;
+            // 
+            // txtLivroId
+            // 
+            this.txtLivroId.Enabled = false;
+            this.txtLivroId.Location = new System.Drawing.Point(75, 88);
+            this.txtLivroId.Name = "txtLivroId";
+            this.txtLivroId.ReadOnly = true;
+            this.txtLivroId.Size = new System.Drawing.Size(131, 20);
+            this.txtLivroId.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 72);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Livro Id";
             // 
             // Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtLivroId);
             this.Controls.Add(this.txtAnoPubli);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -203,5 +225,7 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAnoPubli;
+        private System.Windows.Forms.TextBox txtLivroId;
+        private System.Windows.Forms.Label label7;
     }
 }

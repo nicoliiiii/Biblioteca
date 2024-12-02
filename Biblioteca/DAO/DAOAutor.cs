@@ -11,7 +11,7 @@ namespace Biblioteca.DAO
 {
     class DAOAutor
     {
-        private string LinhaConexao = "Server=localhost;Database=biblioteca;Uid=root;Pwd=;";
+        private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
 
         public DAOAutor()

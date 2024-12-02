@@ -34,11 +34,13 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.txtTituloLivro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtAutorId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(37, 172);
+            this.btnCadastrar.Location = new System.Drawing.Point(37, 224);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(100, 23);
             this.btnCadastrar.TabIndex = 0;
@@ -49,7 +51,7 @@ namespace Biblioteca.Cadastro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 63);
+            this.label1.Location = new System.Drawing.Point(34, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 1;
@@ -57,14 +59,14 @@ namespace Biblioteca.Cadastro
             // 
             // txtNomeAutor
             // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(37, 79);
+            this.txtNomeAutor.Location = new System.Drawing.Point(37, 159);
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.Size = new System.Drawing.Size(100, 20);
             this.txtNomeAutor.TabIndex = 2;
             // 
             // txtTituloLivro
             // 
-            this.txtTituloLivro.Location = new System.Drawing.Point(37, 127);
+            this.txtTituloLivro.Location = new System.Drawing.Point(37, 198);
             this.txtTituloLivro.Name = "txtTituloLivro";
             this.txtTituloLivro.Size = new System.Drawing.Size(100, 20);
             this.txtTituloLivro.TabIndex = 3;
@@ -72,17 +74,37 @@ namespace Biblioteca.Cadastro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 111);
+            this.label2.Location = new System.Drawing.Point(34, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Titulo do Livro";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Id Autor";
+            // 
+            // txtAutorId
+            // 
+            this.txtAutorId.Enabled = false;
+            this.txtAutorId.Location = new System.Drawing.Point(37, 120);
+            this.txtAutorId.Name = "txtAutorId";
+            this.txtAutorId.ReadOnly = true;
+            this.txtAutorId.Size = new System.Drawing.Size(100, 20);
+            this.txtAutorId.TabIndex = 6;
             // 
             // Autor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(196, 450);
+            this.Controls.Add(this.txtAutorId);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTituloLivro);
             this.Controls.Add(this.txtNomeAutor);
@@ -102,5 +124,7 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.TextBox txtTituloLivro;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtAutorId;
     }
 }
