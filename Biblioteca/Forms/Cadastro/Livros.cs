@@ -30,7 +30,7 @@ namespace Biblioteca.Cadastro
         private void LimparCampos()
         {
             txtTituloLivro.Text = "";
-            txtNomeAutor.Text = "";
+            cbxAutor.Text = "";
             txtGenero.Text = "";
             txtClassificacao.Text = "";
             txtNumPag.Text = "";
@@ -40,7 +40,7 @@ namespace Biblioteca.Cadastro
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            string query = "insert into Livros (TituloLivro, NomeAutor, Genero,Classificacao,NumPag,AnoPubli,Disponivel) Values (@titulolivro, @nomeautor, @genero, @classificacao, @numpag,@anopubli, @disponivel)";
+            string query = "insert into Livros (TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel) Values (@titulolivro, @autorid, @genero, @classificacao, @numpag,@anopubli, @disponivel)";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
@@ -48,7 +48,7 @@ namespace Biblioteca.Cadastro
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
             comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
-            comando.Parameters.Add(new MySqlParameter("@nomeautor", txtNomeAutor.Text));
+            comando.Parameters.Add(new MySqlParameter("@autorid", cbxAutor.Text));
             comando.Parameters.Add(new MySqlParameter("@genero", txtGenero.Text));
             comando.Parameters.Add(new MySqlParameter("@classificacao", txtClassificacao.Text));
             comando.Parameters.Add(new MySqlParameter("@numpag", txtNumPag.Text));

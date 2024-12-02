@@ -8,8 +8,9 @@ namespace Biblioteca.Entidades
 {
     class LivrosEntidade
     {
+        public int LivroId { get; set; }
         public string TituloLivro { get; set; }
-        public string NomeAutor { get; set; }
+        public int AutorId { get; set; }
         public string Genero { get; set; }
         public string Classificacao { get; set; }
         public string NumPag { get; set; }
@@ -18,7 +19,7 @@ namespace Biblioteca.Entidades
 
         public object[] Linha()
         {
-            return new object[] { TituloLivro, NomeAutor, Genero, Classificacao, NumPag, AnoPubli, Disponivel };
+            return new object[] { LivroId,TituloLivro, AutorId, Genero, Classificacao, NumPag, AnoPubli, Disponivel };
         }
     }
 }

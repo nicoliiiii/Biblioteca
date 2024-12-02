@@ -41,11 +41,35 @@ namespace Biblioteca.DAO
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
+        public DataTable PreencherComboBox()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT AutorId, NomeAutor FROM autores";
+
+            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+
+                try
+                {
+
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
+                }
+            }
+
+            return dataTable;
+        }
         public DataTable ObterLivro()
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT TituloLivro, NomeAutor, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros ORDER BY TituloLivro desc";
+            string query = "SELECT TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros ORDER BY LivroId desc";
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
 

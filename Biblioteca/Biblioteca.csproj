@@ -120,6 +120,12 @@
     <Compile Include="DAO\DAOLivros.cs" />
     <Compile Include="Entidades\AutoresEntidade.cs" />
     <Compile Include="Entidades\LivrosEntidade.cs" />
+    <Compile Include="Forms\USUARIOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\USUARIOS.Designer.cs">
+      <DependentUpon>USUARIOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Editar\EditarAutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastro\Livros.resx">
       <DependentUpon>Livros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\USUARIOS.resx">
+      <DependentUpon>USUARIOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Editar\EditarAutor.resx">
       <DependentUpon>EditarAutor.cs</DependentUpon>

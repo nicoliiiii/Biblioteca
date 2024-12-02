@@ -21,7 +21,7 @@ namespace Biblioteca.DAO
         public void Inserir(AutoresEntidade autor)
         {
             Conexao.Open();
-            string query = "insert into Autores (NomeAutor,TituloLivro) Values(@nomeautor, @titulolivro)";
+            string query = "insert into autores (NomeAutor,TituloLivro) Values(@nomeautor, @titulolivro)";
             MySqlCommand comando = new MySqlCommand(query, Conexao);
             MySqlParameter parametro1 = new MySqlParameter("@nomeautor", autor.NomeAutor);
             MySqlParameter parametro2 = new MySqlParameter("@titulolivro", autor.TituloLivro);
@@ -35,7 +35,7 @@ namespace Biblioteca.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT NomeAutor,TituloLivro FROM Autores ORDER BY NomeAutor desc";
+            string query = "SELECT NomeAutor,TituloLivro FROM autores ORDER BY AutorId desc";
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
 
 

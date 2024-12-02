@@ -8,12 +8,13 @@ namespace Biblioteca.Entidades
 {
     class AutoresEntidade
     {
+        public int AutorId { get; set; }
         public string NomeAutor { get; set; }
         public string TituloLivro { get; set; }
 
         public object[] Linha()
         {
-            return new object[] { TituloLivro, NomeAutor};
+            return new object[] { AutorId,TituloLivro, NomeAutor};
         }
     }
 }

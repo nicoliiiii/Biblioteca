@@ -33,7 +33,6 @@ namespace Biblioteca.Cadastro
             this.label1 = new System.Windows.Forms.Label();
             this.txtTituloLivro = new System.Windows.Forms.TextBox();
             this.chkDisponivel = new System.Windows.Forms.CheckBox();
-            this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtClassificacao = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@ namespace Biblioteca.Cadastro
             this.txtAnoPubli = new System.Windows.Forms.TextBox();
             this.txtLivroId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbxAutor = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -82,13 +82,6 @@ namespace Biblioteca.Cadastro
             this.chkDisponivel.TabIndex = 3;
             this.chkDisponivel.Text = "Disponivel";
             this.chkDisponivel.UseVisualStyleBackColor = true;
-            // 
-            // txtNomeAutor
-            // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(75, 176);
-            this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(131, 20);
-            this.txtNomeAutor.TabIndex = 4;
             // 
             // label2
             // 
@@ -181,11 +174,20 @@ namespace Biblioteca.Cadastro
             this.label7.TabIndex = 15;
             this.label7.Text = "Livro Id";
             // 
+            // cbxAutor
+            // 
+            this.cbxAutor.FormattingEnabled = true;
+            this.cbxAutor.Location = new System.Drawing.Point(73, 176);
+            this.cbxAutor.Name = "cbxAutor";
+            this.cbxAutor.Size = new System.Drawing.Size(121, 21);
+            this.cbxAutor.TabIndex = 16;
+            // 
             // Livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 450);
+            this.Controls.Add(this.cbxAutor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtLivroId);
             this.Controls.Add(this.txtAnoPubli);
@@ -197,7 +199,6 @@ namespace Biblioteca.Cadastro
             this.Controls.Add(this.txtClassificacao);
             this.Controls.Add(this.txtGenero);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.chkDisponivel);
             this.Controls.Add(this.txtTituloLivro);
             this.Controls.Add(this.label1);
@@ -215,7 +216,6 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTituloLivro;
         private System.Windows.Forms.CheckBox chkDisponivel;
-        private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGenero;
         private System.Windows.Forms.TextBox txtClassificacao;
@@ -227,5 +227,6 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtAnoPubli;
         private System.Windows.Forms.TextBox txtLivroId;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxAutor;
     }
 }
