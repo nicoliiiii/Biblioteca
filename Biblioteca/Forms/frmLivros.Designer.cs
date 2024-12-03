@@ -38,12 +38,14 @@ namespace Biblioteca.Forms
             // 
             // dtGridLivros
             // 
+            this.dtGridLivros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridLivros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridLivros.Location = new System.Drawing.Point(23, 139);
             this.dtGridLivros.Name = "dtGridLivros";
             this.dtGridLivros.Size = new System.Drawing.Size(738, 299);
             this.dtGridLivros.TabIndex = 0;
-            this.dtGridLivros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridLivros_CellContentClick);
+            
+            this.dtGridLivros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridLivros_CellDoubleClick);
             // 
             // label1
             // 

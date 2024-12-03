@@ -31,16 +31,7 @@ namespace Biblioteca.Forms
             dtGridLivros.DataSource = dao.ObterLivro();
         }
 
-        private void dtGridLivros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                string TituloLivro = Convert.ToString(dtGridLivros.Rows[e.RowIndex].Cells[0].Value);
-                EditarLivro editar = new EditarLivro(TituloLivro);
-                editar.FormClosed += Fechou_Editar_FormClosed;
-                editar.ShowDialog();
-            }
-        }
+       
         private void Fechou_Editar_FormClosed(object sender, FormClosedEventArgs e)
         {
             dtGridLivros.DataSource = dao.ObterLivro();
@@ -56,6 +47,17 @@ namespace Biblioteca.Forms
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
             dtGridLivros.DataSource = dao.Pesquisar(txtPesquisar.Text);
+        }
+
+        private void dtGridLivros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                int livroId = Convert.ToInt32(dtGridLivros.Rows[e.RowIndex].Cells[0].Value);
+                EditarLivro editar = new EditarLivro(livroId);
+                editar.FormClosed += Fechou_Editar_FormClosed;
+                editar.ShowDialog();
+            }
         }
     }
 }

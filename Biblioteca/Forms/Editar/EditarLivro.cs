@@ -15,27 +15,27 @@ namespace Biblioteca.Forms.Editar
     {
         private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
-        public EditarLivro(string TituloLivro)
+        public EditarLivro(int LivroId)
         {
             InitializeComponent();
-            string query = "SELECT TituloLivro, NomeAutor, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros WHERE TituloLivro = @titulolivro";
+            string query = "SELECT LivroId,TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros WHERE LivroId = @livroid";
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
-            comando.Parameters.Add(new MySqlParameter("@titulolivro", TituloLivro));
+            comando.Parameters.Add(new MySqlParameter("@livroid", LivroId));
             MySqlDataReader Leitura = comando.ExecuteReader();
             if (Leitura.HasRows)
             {
                 while (Leitura.Read())
                 {
-                    txtTituloLivro.Text = Leitura[0].ToString();
-                    txtNomeAutor.Text = Leitura[1].ToString();
-                    txtGenero.Text= Leitura[2].ToString();
-                   txtClassificacao.Text = Leitura[3].ToString();
-                   txtNumPag.Text = Leitura[4].ToString();
-                   txtAnoPubli.Text = Leitura[5].ToString();
-                   chkDisponivel.Checked = Convert.ToBoolean(Leitura[6]);
+                    txtTituloLivro.Text = Leitura[1].ToString();
+                    txtNomeAutor.Text = Leitura[2].ToString();
+                    txtGenero.Text= Leitura[3].ToString();
+                   txtClassificacao.Text = Leitura[4].ToString();
+                   txtNumPag.Text = Leitura[5].ToString();
+                   txtAnoPubli.Text = Leitura[6].ToString();
+                   chkDisponivel.Checked = Convert.ToBoolean(Leitura[7]);
 
                 }
             }
@@ -45,7 +45,7 @@ namespace Biblioteca.Forms.Editar
 
         private void btnSalvarLivro_Click(object sender, EventArgs e)
         {
-            string query = "update Livros set TituloLivro = @titulolivro, NomeAutor = @nomeautor,Genero = @genero,Classificacao = @classificacao,NumPag = @numpag, AnoPubli = @anopubli,Disponivel = @disponivel WHERE  TituloLivro = @titulolivro";
+            string query = "update Livros set LivroId= @livroid, TituloLivro = @titulolivro, AutorId = @autorid,Genero = @genero,Classificacao = @classificacao,NumPag = @numpag, AnoPubli = @anopubli,Disponivel = @disponivel WHERE  LivroId = @livroid";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
@@ -77,7 +77,7 @@ namespace Biblioteca.Forms.Editar
 
         private void btnExcluirLivro_Click(object sender, EventArgs e)
         {
-            string query = "Delete from Livros WHERE  TituloLivro = @titulolivro";
+            string query = "Delete from Livros WHERE  LivroId = @livroid";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();

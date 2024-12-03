@@ -55,7 +55,7 @@ namespace Biblioteca.Forms.Editar
             // 
             // btnSalvarAutor
             // 
-            this.btnSalvarAutor.Location = new System.Drawing.Point(56, 179);
+            this.btnSalvarAutor.Location = new System.Drawing.Point(56, 190);
             this.btnSalvarAutor.Name = "btnSalvarAutor";
             this.btnSalvarAutor.Size = new System.Drawing.Size(75, 23);
             this.btnSalvarAutor.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace Biblioteca.Forms.Editar
             // 
             // btnExcluirAutor
             // 
-            this.btnExcluirAutor.Location = new System.Drawing.Point(56, 208);
+            this.btnExcluirAutor.Location = new System.Drawing.Point(56, 219);
             this.btnExcluirAutor.Name = "btnExcluirAutor";
             this.btnExcluirAutor.Size = new System.Drawing.Size(75, 23);
             this.btnExcluirAutor.TabIndex = 5;
@@ -76,9 +76,9 @@ namespace Biblioteca.Forms.Editar
             // txtIdAutor
             // 
             this.txtIdAutor.Enabled = false;
-            this.txtIdAutor.Location = new System.Drawing.Point(50, 114);
+            this.txtIdAutor.Location = new System.Drawing.Point(56, 114);
             this.txtIdAutor.Name = "txtIdAutor";
-            this.txtIdAutor.Size = new System.Drawing.Size(100, 20);
+            this.txtIdAutor.Size = new System.Drawing.Size(94, 20);
             this.txtIdAutor.TabIndex = 6;
             // 
             // label1

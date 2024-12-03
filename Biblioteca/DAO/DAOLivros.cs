@@ -46,30 +46,15 @@ namespace Biblioteca.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros ORDER BY LivroId desc";
-            MySqlCommand Comando = new MySqlCommand(query, Conexao);
-
-
-            MySqlDataReader Leitura = Comando.ExecuteReader();
-
-            foreach (var atributos in typeof(LivrosEntidade).GetProperties())
+            string query = "SELECT LivroId,TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel FROM Livros ORDER BY LivroId desc";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
+            try
             {
-                dt.Columns.Add(atributos.Name);
+                adapter.Fill(dt);
             }
-            if (Leitura.HasRows)
+            catch (Exception ex)
             {
-                while (Leitura.Read())
-                {
-                    LivrosEntidade l = new LivrosEntidade();
-                    l.TituloLivro = Leitura[0].ToString();
-                    l.AutorId = Convert.ToInt16(Leitura[1]);
-                    l.Genero = Leitura[2].ToString();
-                    l.Classificacao = Leitura[3].ToString();
-                    l.NumPag = Leitura[4].ToString();
-                    l.AnoPubli = Leitura[5].ToString();
-                    l.Disponivel = Convert.ToBoolean(Leitura[6]);
-                    dt.Rows.Add(l.Linha());
-                }
+
             }
             Conexao.Close();
             return dt;
@@ -82,34 +67,21 @@ namespace Biblioteca.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT * FROM Livros ORDER BY TituloLivro desc";
+                query = "SELECT * AutorId FROM Livros ORDER BY LivroId desc";
             }
             else
             {
                 query = "SELECT * FROM Livros WHERE TituloLivro LIKE '%" + pesquisa + "%' ORDER BY LivroId desc";
             }
 
-            MySqlCommand Comando = new MySqlCommand(query, Conexao);
-            MySqlDataReader Leitura = Comando.ExecuteReader();
-
-            foreach (var atributos in typeof(LivrosEntidade).GetProperties())
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
+            try
             {
-                dt.Columns.Add(atributos.Name);
+                adapter.Fill(dt);
             }
-            if (Leitura.HasRows)
+            catch (Exception ex)
             {
-                while (Leitura.Read())
-                {
-                    LivrosEntidade l = new LivrosEntidade();
-                    l.TituloLivro = Leitura[0].ToString();
-                    l.AutorId = Convert.ToInt32(Leitura[1]);
-                    l.Genero = Leitura[2].ToString();
-                    l.Classificacao = Leitura[3].ToString();
-                    l.NumPag = Leitura[4].ToString();
-                    l.AnoPubli = Leitura[5].ToString();
-                    l.Disponivel = Convert.ToBoolean(Leitura[6]);
-                    dt.Rows.Add(l.Linha());
-                }
+
             }
             Conexao.Close();
             return dt;
