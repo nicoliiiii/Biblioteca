@@ -29,5 +29,10 @@ namespace Biblioteca
             frmAutores a = new frmAutores();
             a.ShowDialog();
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

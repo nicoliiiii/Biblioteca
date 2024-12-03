@@ -44,7 +44,6 @@ namespace Biblioteca.Forms
             this.dtGridLivros.Name = "dtGridLivros";
             this.dtGridLivros.Size = new System.Drawing.Size(738, 299);
             this.dtGridLivros.TabIndex = 0;
-            
             this.dtGridLivros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridLivros_CellDoubleClick);
             // 
             // label1
@@ -84,6 +83,7 @@ namespace Biblioteca.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtGridLivros);
             this.Name = "frmLivros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLivros";
             ((System.ComponentModel.ISupportInitialize)(this.dtGridLivros)).EndInit();
             this.ResumeLayout(false);

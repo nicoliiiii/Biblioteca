@@ -16,11 +16,11 @@ namespace Biblioteca.Forms.Cadastro
         private void btnLogar_Click(object sender, EventArgs e)
         {
             
-            usuario = new USUARIO();
-            usuario.Usuario = txtLogin.Text;
-            usuario.Senha = txtSenha.Text;
+           // usuario = new USUARIO();
+           // usuario.Usuario = txtLogin.Text;
+           // usuario.Senha = txtSenha.Text;
 
-            if (usuario.Logar())
+          //  if (usuario.Logar())
             {
                 Principal p = new Principal();
                 p.FormClosed += FecharForm; 
@@ -30,7 +30,7 @@ namespace Biblioteca.Forms.Cadastro
                 txtLogin.Focus();
                 p.Show();
             }
-            else
+          //  else
             {
                 MessageBox.Show("Login ou senha inválidos.");
             }

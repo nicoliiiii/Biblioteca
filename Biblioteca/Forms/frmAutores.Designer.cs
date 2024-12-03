@@ -83,6 +83,7 @@ namespace Biblioteca.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtGridAutor);
             this.Name = "frmAutores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAutores";
             ((System.ComponentModel.ISupportInitialize)(this.dtGridAutor)).EndInit();
             this.ResumeLayout(false);
