@@ -32,15 +32,13 @@ namespace Biblioteca.Cadastro
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
-            this.txtTituloLivro = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAutorId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(37, 224);
+            this.btnCadastrar.Location = new System.Drawing.Point(37, 185);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(100, 23);
             this.btnCadastrar.TabIndex = 0;
@@ -63,22 +61,6 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor.Name = "txtNomeAutor";
             this.txtNomeAutor.Size = new System.Drawing.Size(100, 20);
             this.txtNomeAutor.TabIndex = 2;
-            // 
-            // txtTituloLivro
-            // 
-            this.txtTituloLivro.Location = new System.Drawing.Point(37, 198);
-            this.txtTituloLivro.Name = "txtTituloLivro";
-            this.txtTituloLivro.Size = new System.Drawing.Size(100, 20);
-            this.txtTituloLivro.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 182);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Titulo do Livro";
             // 
             // label3
             // 
@@ -105,8 +87,6 @@ namespace Biblioteca.Cadastro
             this.ClientSize = new System.Drawing.Size(196, 450);
             this.Controls.Add(this.txtAutorId);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTituloLivro);
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
@@ -122,8 +102,6 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNomeAutor;
-        private System.Windows.Forms.TextBox txtTituloLivro;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAutorId;
     }

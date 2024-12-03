@@ -1,4 +1,5 @@
-﻿using MySqlConnector;
+﻿using Biblioteca.DAO;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,11 @@ namespace Biblioteca.Cadastro
         public Livros()
         {
             InitializeComponent();
+            DAOAutor dao_autor = new DAOAutor();
+             cbxAutor.DataSource = dao_autor.PreencherComboBox();
+            cbxAutor.DisplayMember = "NomeAutor";
+            cbxAutor.ValueMember = "AutorId";
+
         }
 
         private void btnExcluirLivro_Click(object sender, EventArgs e)
@@ -48,7 +54,7 @@ namespace Biblioteca.Cadastro
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
             comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
-            comando.Parameters.Add(new MySqlParameter("@autorid", cbxAutor.Text));
+            comando.Parameters.Add(new MySqlParameter("@autorid", cbxAutor.SelectedValue));
             comando.Parameters.Add(new MySqlParameter("@genero", txtGenero.Text));
             comando.Parameters.Add(new MySqlParameter("@classificacao", txtClassificacao.Text));
             comando.Parameters.Add(new MySqlParameter("@numpag", txtNumPag.Text));
@@ -67,5 +73,7 @@ namespace Biblioteca.Cadastro
                 MessageBox.Show("Erro ao atualizar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }

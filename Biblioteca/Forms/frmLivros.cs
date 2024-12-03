@@ -52,5 +52,10 @@ namespace Biblioteca.Forms
             l.FormClosed += Fechou_Editar_FormClosed;
             l.ShowDialog();
         }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtGridLivros.DataSource = dao.Pesquisar(txtPesquisar.Text);
+        }
     }
 }

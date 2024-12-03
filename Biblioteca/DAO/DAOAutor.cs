@@ -21,13 +21,13 @@ namespace Biblioteca.DAO
         public void Inserir(AutoresEntidade autor)
         {
             Conexao.Open();
-            string query = "insert into autores (NomeAutor,TituloLivro) Values(@nomeautor, @titulolivro)";
+            string query = "insert into autores (NomeAutor) Values(@nomeautor)";
             MySqlCommand comando = new MySqlCommand(query, Conexao);
             MySqlParameter parametro1 = new MySqlParameter("@nomeautor", autor.NomeAutor);
-            MySqlParameter parametro2 = new MySqlParameter("@titulolivro", autor.TituloLivro);
+            
            
             comando.Parameters.Add(parametro1);
-            comando.Parameters.Add(parametro2);
+           
             comando.ExecuteNonQuery(); 
             Conexao.Close();
         }
@@ -35,28 +35,21 @@ namespace Biblioteca.DAO
         {
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT NomeAutor,TituloLivro FROM autores ORDER BY AutorId desc";
-            MySqlCommand Comando = new MySqlCommand(query, Conexao);
-
-
-            MySqlDataReader Leitura = Comando.ExecuteReader();
-
-            foreach (var atributos in typeof(AutoresEntidade).GetProperties())
+            string query = "SELECT AutorId, NomeAutor  FROM autores ORDER BY AutorId desc";
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
+            try
             {
-                dt.Columns.Add(atributos.Name);
+                adapter.Fill(dt);
             }
-            if (Leitura.HasRows)
+            catch (Exception ex)
             {
-                while (Leitura.Read())
-                {
-                    AutoresEntidade a = new AutoresEntidade();
-                    a.NomeAutor = Leitura[0].ToString();
-                    a.TituloLivro = Leitura[1].ToString();
-                    dt.Rows.Add(a.Linha());
-                }
+               
             }
             Conexao.Close();
             return dt;
+
+
+          
         }
         public DataTable Pesquisar(string pesquisa)
         {
@@ -66,11 +59,11 @@ namespace Biblioteca.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT * FROM Autores ORDER BY NomeAutor desc";
+                query = "SELECT * FROM autores ORDER BY AutorId desc";
             }
             else
             {
-                query = "SELECT * FROM Autores WHERE NomeAutor LIKE '%" + pesquisa + "%' ORDER BY NomeAutor desc";
+                query = "SELECT * FROM autores WHERE NomeAutor LIKE '%" + pesquisa + "%' ORDER BY AutorId desc";
             }
 
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
@@ -86,12 +79,35 @@ namespace Biblioteca.DAO
                 {
                     AutoresEntidade a = new AutoresEntidade();
                     a.NomeAutor = Leitura[0].ToString();
-                    a.TituloLivro = Leitura[1].ToString();
                     dt.Rows.Add(a.Linha());
                 }
             }
             Conexao.Close();
             return dt;
+        }
+        public DataTable PreencherComboBox()
+        {
+            DataTable dataTable = new DataTable();
+
+            string query = "SELECT AutorId, NomeAutor FROM autores";
+
+            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
+            {
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
+
+                try
+                {
+
+                    adapter.Fill(dataTable);
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
+                }
+            }
+
+            return dataTable;
         }
     }
 

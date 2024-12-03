@@ -35,8 +35,9 @@ namespace Biblioteca.Forms
         {
             if (e.RowIndex >= 0)
             {
-                string NomeAutor = Convert.ToString(dtGridAutor.Rows[e.RowIndex].Cells[0].Value);
-                EditarAutor editar = new EditarAutor(NomeAutor);
+                int AutorId = Convert.ToInt16(dtGridAutor.Rows[e.RowIndex].Cells[0].Value);
+                string NomeAutor = Convert.ToString(dtGridAutor.Rows[e.RowIndex].Cells[1].Value);
+                EditarAutor editar = new EditarAutor(AutorId, NomeAutor);
                 editar.FormClosed += Fechou_Editar_FormClosed;
                 editar.ShowDialog();
             }
@@ -51,6 +52,11 @@ namespace Biblioteca.Forms
             Autor a = new Autor();
             a.FormClosed += Fechou_Editar_FormClosed;
             a.ShowDialog();
+        }
+
+        private void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            dtGridAutor.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
     }
 }

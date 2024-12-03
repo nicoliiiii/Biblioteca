@@ -21,10 +21,10 @@ namespace Biblioteca.DAO
         public void Inserir(LivrosEntidade livro)
         {
             Conexao.Open();
-            string query = "insert into Livros (TituloLivro, NomeAutor, Genero,Classificacao,NumPag,AnoPubli,Disponivel) Values(@titulolivro, @nomeautor, @genero, @classificacao, @numpag,@anopubli, @disponivel)";
+            string query = "insert into Livros (TituloLivro, AutorId, Genero,Classificacao,NumPag,AnoPubli,Disponivel) Values(@titulolivro, @autorid, @genero, @classificacao, @numpag,@anopubli, @disponivel)";
             MySqlCommand comando = new MySqlCommand(query, Conexao);
             MySqlParameter parametro1 = new MySqlParameter("@TituloLivro", livro.TituloLivro);
-            MySqlParameter parametro2 = new MySqlParameter("@NomeAutor", livro.NomeAutor);
+            MySqlParameter parametro2 = new MySqlParameter("@AutorId", livro.AutorId);
             MySqlParameter parametro3 = new MySqlParameter("@Genero", livro.Genero);
             MySqlParameter parametro4 = new MySqlParameter("@Classificacao", livro.Classificacao);
             MySqlParameter parametro5 = new MySqlParameter("@NumPag", livro.NumPag);
@@ -41,30 +41,7 @@ namespace Biblioteca.DAO
             comando.ExecuteNonQuery();
             Conexao.Close();
         }
-        public DataTable PreencherComboBox()
-        {
-            DataTable dataTable = new DataTable();
-
-            string query = "SELECT AutorId, NomeAutor FROM autores";
-
-            using (MySqlConnection connection = new MySqlConnection(LinhaConexao))
-            {
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-
-                try
-                {
-
-                    adapter.Fill(dataTable);
-                }
-                catch (Exception ex)
-                {
-
-                    throw new Exception("Erro ao acessar os dados: " + ex.Message);
-                }
-            }
-
-            return dataTable;
-        }
+       
         public DataTable ObterLivro()
         {
             DataTable dt = new DataTable();
@@ -85,7 +62,7 @@ namespace Biblioteca.DAO
                 {
                     LivrosEntidade l = new LivrosEntidade();
                     l.TituloLivro = Leitura[0].ToString();
-                    l.NomeAutor = Leitura[1].ToString();
+                    l.AutorId = Convert.ToInt16(Leitura[1]);
                     l.Genero = Leitura[2].ToString();
                     l.Classificacao = Leitura[3].ToString();
                     l.NumPag = Leitura[4].ToString();
@@ -109,7 +86,7 @@ namespace Biblioteca.DAO
             }
             else
             {
-                query = "SELECT * FROM Livros WHERE TituloLivro LIKE '%" + pesquisa + "%' ORDER BY TituloLivro desc";
+                query = "SELECT * FROM Livros WHERE TituloLivro LIKE '%" + pesquisa + "%' ORDER BY LivroId desc";
             }
 
             MySqlCommand Comando = new MySqlCommand(query, Conexao);
@@ -125,7 +102,7 @@ namespace Biblioteca.DAO
                 {
                     LivrosEntidade l = new LivrosEntidade();
                     l.TituloLivro = Leitura[0].ToString();
-                    l.NomeAutor = Leitura[1].ToString();
+                    l.AutorId = Convert.ToInt32(Leitura[1]);
                     l.Genero = Leitura[2].ToString();
                     l.Classificacao = Leitura[3].ToString();
                     l.NumPag = Leitura[4].ToString();

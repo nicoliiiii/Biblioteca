@@ -15,16 +15,16 @@ namespace Biblioteca.Forms.Editar
     {
         private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
-        public EditarAutor(string NomeAutor)
+        public EditarAutor(int AutorId, string NomeAutor)
         {
             InitializeComponent();
 
-            string query = "SELECT NomeAutor, TituloLivro FROM Autores WHERE NomeAutor = @nomeautor";
+            string query = "SELECT AutorId, NomeAutor FROM autores WHERE AutorId = @autorid, NomeAutor = @nomeautor";
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
 
             MySqlCommand comando = new MySqlCommand(query, Conexao);
-
+            comando.Parameters.Add(new MySqlParameter("@autorid", AutorId));
             comando.Parameters.Add(new MySqlParameter("@nomeautor", NomeAutor));
             MySqlDataReader Leitura = comando.ExecuteReader();
 
@@ -34,7 +34,7 @@ namespace Biblioteca.Forms.Editar
                 {
                
                     txtNomeAutor.Text = Leitura[0].ToString();
-                    txtTituloLivro.Text = Leitura[1].ToString();
+                    
 
                 }
             }
@@ -44,7 +44,7 @@ namespace Biblioteca.Forms.Editar
 
         private void btnSalvarAutor_Click(object sender, EventArgs e)
         {
-            string query = "update Autores set NomeAutor = @nomeautor, TituloLivro = @titulolivro WHERE  NomeAutor = @nomeautor";
+            string query = "update autores set AutorId = @autorid, NomeAutor = @nomeautor WHERE AutorId = @autorid, NomeAutor = @nomeautor";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
@@ -52,8 +52,7 @@ namespace Biblioteca.Forms.Editar
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
             comando.Parameters.Add(new MySqlParameter("@nomeautor", txtNomeAutor.Text));
-            comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
-          
+           
 
             int resposta = comando.ExecuteNonQuery();
 
@@ -71,7 +70,7 @@ namespace Biblioteca.Forms.Editar
 
         private void btnExcluirAutor_Click(object sender, EventArgs e)
         {
-            string query = "Delete from Autores WHERE  NomeAutor = @nomeautor";
+            string query = "Delete from autores WHERE AutorId= @autorid,  NomeAutor = @nomeautor";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
@@ -90,6 +89,8 @@ namespace Biblioteca.Forms.Editar
                 MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
     }
 

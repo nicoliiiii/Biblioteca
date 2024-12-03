@@ -27,19 +27,19 @@ namespace Biblioteca.Cadastro
         private void LimparCampos()
         {
             txtNomeAutor.Text = "";
-            txtTituloLivro.Text = "";
+           
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            string query = "insert into Autores (TituloLivro, NomeAutor) Values (@titulolivro, @nomeautor)";
+            string query = "insert into autores (NomeAutor) Values (@nomeautor)";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();
 
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
-            comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
+           
             comando.Parameters.Add(new MySqlParameter("@nomeautor", txtNomeAutor.Text));
 
             int resposta = comando.ExecuteNonQuery();

@@ -179,7 +179,7 @@ namespace Biblioteca.Cadastro
             this.cbxAutor.FormattingEnabled = true;
             this.cbxAutor.Location = new System.Drawing.Point(73, 176);
             this.cbxAutor.Name = "cbxAutor";
-            this.cbxAutor.Size = new System.Drawing.Size(121, 21);
+            this.cbxAutor.Size = new System.Drawing.Size(133, 21);
             this.cbxAutor.TabIndex = 16;
             // 
             // Livros

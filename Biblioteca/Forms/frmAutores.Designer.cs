@@ -38,6 +38,7 @@ namespace Biblioteca.Forms
             // 
             // dtGridAutor
             // 
+            this.dtGridAutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridAutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridAutor.Location = new System.Drawing.Point(12, 154);
             this.dtGridAutor.Name = "dtGridAutor";
@@ -60,6 +61,7 @@ namespace Biblioteca.Forms
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(288, 20);
             this.txtPesquisar.TabIndex = 2;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // btnNovoAutor
             // 
