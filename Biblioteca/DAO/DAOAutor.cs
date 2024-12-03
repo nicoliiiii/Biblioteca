@@ -59,28 +59,21 @@ namespace Biblioteca.DAO
             string query = "";
             if (string.IsNullOrEmpty(pesquisa))
             {
-                query = "SELECT * FROM autores ORDER BY AutorId desc";
+                query = "SELECT *  FROM autores ORDER BY AutorId desc";
             }
             else
             {
                 query = "SELECT * FROM autores WHERE NomeAutor LIKE '%" + pesquisa + "%' ORDER BY AutorId desc";
             }
 
-            MySqlCommand Comando = new MySqlCommand(query, Conexao);
-            MySqlDataReader Leitura = Comando.ExecuteReader();
-
-            foreach (var atributos in typeof(AutoresEntidade).GetProperties())
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, Conexao);
+            try
             {
-                dt.Columns.Add(atributos.Name);
+                adapter.Fill(dt);
             }
-            if (Leitura.HasRows) 
+            catch (Exception ex)
             {
-                while (Leitura.Read())
-                {
-                    AutoresEntidade a = new AutoresEntidade();
-                    a.NomeAutor = Leitura[0].ToString();
-                    dt.Rows.Add(a.Linha());
-                }
+
             }
             Conexao.Close();
             return dt;

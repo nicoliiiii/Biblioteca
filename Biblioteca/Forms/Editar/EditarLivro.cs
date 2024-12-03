@@ -29,8 +29,9 @@ namespace Biblioteca.Forms.Editar
             {
                 while (Leitura.Read())
                 {
+                    txtLivroId.Text =   Leitura[0].ToString();
                     txtTituloLivro.Text = Leitura[1].ToString();
-                    txtNomeAutor.Text = Leitura[2].ToString();
+                    txtAutorId.Text = Leitura[2].ToString();
                     txtGenero.Text= Leitura[3].ToString();
                    txtClassificacao.Text = Leitura[4].ToString();
                    txtNumPag.Text = Leitura[5].ToString();
@@ -52,8 +53,9 @@ namespace Biblioteca.Forms.Editar
 
             MySqlCommand comando = new MySqlCommand(query, Conexao);
 
+            comando.Parameters.Add(new MySqlParameter("@livroid", txtLivroId.Text));
             comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
-            comando.Parameters.Add(new MySqlParameter("@nomeautor", txtNomeAutor.Text));
+            comando.Parameters.Add(new MySqlParameter("@autorid", txtAutorId.Text));
             comando.Parameters.Add(new MySqlParameter("@genero", txtGenero.Text));
             comando.Parameters.Add(new MySqlParameter("@classificacao", txtClassificacao.Text));
             comando.Parameters.Add(new MySqlParameter("@numpag", txtNumPag.Text));
@@ -83,7 +85,7 @@ namespace Biblioteca.Forms.Editar
             Conexao.Open();
 
             MySqlCommand comando = new MySqlCommand(query, Conexao);
-            comando.Parameters.Add(new MySqlParameter("@titulolivro", txtTituloLivro.Text));
+            comando.Parameters.Add(new MySqlParameter("@livroid", txtLivroId.Text));
             int resposta = comando.ExecuteNonQuery();
 
             if (resposta == 1)

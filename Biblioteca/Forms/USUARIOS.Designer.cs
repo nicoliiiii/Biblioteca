@@ -42,6 +42,7 @@ namespace Biblioteca.Forms.Cadastro
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(141, 20);
             this.txtSenha.TabIndex = 0;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // txtLogin
             // 
@@ -76,6 +77,7 @@ namespace Biblioteca.Forms.Cadastro
             this.btnLogar.TabIndex = 4;
             this.btnLogar.Text = "Logar";
             this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // USUARIO
             // 

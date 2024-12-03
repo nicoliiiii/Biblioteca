@@ -94,7 +94,7 @@ namespace Biblioteca.Forms.Editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 450);
+            this.ClientSize = new System.Drawing.Size(198, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIdAutor);
             this.Controls.Add(this.btnExcluirAutor);

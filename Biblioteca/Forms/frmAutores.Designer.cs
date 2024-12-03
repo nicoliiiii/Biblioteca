@@ -44,7 +44,7 @@ namespace Biblioteca.Forms
             this.dtGridAutor.Name = "dtGridAutor";
             this.dtGridAutor.Size = new System.Drawing.Size(723, 284);
             this.dtGridAutor.TabIndex = 0;
-            this.dtGridAutor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridAutor_CellContentClick);
+            this.dtGridAutor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridAutor_CellDoubleClick);
             // 
             // label1
             // 

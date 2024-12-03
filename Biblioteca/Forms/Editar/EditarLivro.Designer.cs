@@ -32,7 +32,7 @@ namespace Biblioteca.Forms.Editar
             this.txtTituloLivro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalvarLivro = new System.Windows.Forms.Button();
-            this.txtNomeAutor = new System.Windows.Forms.TextBox();
+            this.txtAutorId = new System.Windows.Forms.TextBox();
             this.txtAnoPubli = new System.Windows.Forms.TextBox();
             this.txtNumPag = new System.Windows.Forms.TextBox();
             this.txtClassificacao = new System.Windows.Forms.TextBox();
@@ -74,12 +74,12 @@ namespace Biblioteca.Forms.Editar
             this.btnSalvarLivro.UseVisualStyleBackColor = true;
             this.btnSalvarLivro.Click += new System.EventHandler(this.btnSalvarLivro_Click);
             // 
-            // txtNomeAutor
+            // txtAutorId
             // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(37, 167);
-            this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeAutor.TabIndex = 3;
+            this.txtAutorId.Location = new System.Drawing.Point(37, 167);
+            this.txtAutorId.Name = "txtAutorId";
+            this.txtAutorId.Size = new System.Drawing.Size(100, 20);
+            this.txtAutorId.TabIndex = 3;
             // 
             // txtAnoPubli
             // 
@@ -209,7 +209,7 @@ namespace Biblioteca.Forms.Editar
             this.Controls.Add(this.txtClassificacao);
             this.Controls.Add(this.txtNumPag);
             this.Controls.Add(this.txtAnoPubli);
-            this.Controls.Add(this.txtNomeAutor);
+            this.Controls.Add(this.txtAutorId);
             this.Controls.Add(this.btnSalvarLivro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTituloLivro);
@@ -225,7 +225,7 @@ namespace Biblioteca.Forms.Editar
         private System.Windows.Forms.TextBox txtTituloLivro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalvarLivro;
-        private System.Windows.Forms.TextBox txtNomeAutor;
+        private System.Windows.Forms.TextBox txtAutorId;
         private System.Windows.Forms.TextBox txtAnoPubli;
         private System.Windows.Forms.TextBox txtNumPag;
         private System.Windows.Forms.TextBox txtClassificacao;

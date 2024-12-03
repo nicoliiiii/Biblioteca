@@ -104,6 +104,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAOUsuarios.cs" />
+    <Compile Include="Entidades\UsuarioEntidade.cs" />
     <Compile Include="Forms\Cadastro\Autor.cs">
       <SubType>Form</SubType>
     </Compile>
