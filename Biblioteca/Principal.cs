@@ -34,5 +34,11 @@ namespace Biblioteca
         {
 
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios u = new frmUsuarios();
+            u.ShowDialog();
+        }
     }
 }

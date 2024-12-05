@@ -43,6 +43,7 @@ namespace Biblioteca.Forms
             this.dtGridUsuario.Name = "dtGridUsuario";
             this.dtGridUsuario.Size = new System.Drawing.Size(756, 303);
             this.dtGridUsuario.TabIndex = 0;
+            this.dtGridUsuario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuario_CellDoubleClick);
             // 
             // txtPesquisar
             // 
@@ -50,6 +51,7 @@ namespace Biblioteca.Forms
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(461, 20);
             this.txtPesquisar.TabIndex = 1;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
             // 
             // btnAddUsuario
             // 

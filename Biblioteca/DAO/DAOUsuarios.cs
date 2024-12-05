@@ -1,11 +1,11 @@
-﻿using MySql.Data.MySqlClient;
-using Biblioteca.Entidades;
+﻿using Biblioteca.Entidades;
 using System.Data;
 using System;
+using MySqlConnector;
 
 namespace Biblioteca.DAO
 {
-     class DAOUsuarios
+    class DAOUsuarios
     {
         private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;

@@ -64,6 +64,7 @@ namespace Biblioteca.Forms.Editar
             this.btnExcluirUsuario.TabIndex = 2;
             this.btnExcluirUsuario.Text = "Excluir";
             this.btnExcluirUsuario.UseVisualStyleBackColor = true;
+            this.btnExcluirUsuario.Click += new System.EventHandler(this.btnExcluirUsuario_Click);
             // 
             // txtSenhaUsuario
             // 
@@ -105,12 +106,13 @@ namespace Biblioteca.Forms.Editar
             this.btnSalvarUsuario.TabIndex = 7;
             this.btnSalvarUsuario.Text = "Salvar";
             this.btnSalvarUsuario.UseVisualStyleBackColor = true;
+            this.btnSalvarUsuario.Click += new System.EventHandler(this.btnSalvarUsuario_Click);
             // 
             // EditarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(209, 450);
             this.Controls.Add(this.btnSalvarUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

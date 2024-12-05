@@ -1,5 +1,5 @@
 ﻿using Biblioteca.Entidades;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 using System;
 using System.Data;
 
@@ -75,7 +75,7 @@ namespace Biblioteca.DAO
             {
                 adapter.Fill(dt);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

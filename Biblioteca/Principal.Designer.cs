@@ -33,6 +33,7 @@ namespace Biblioteca
             this.bibliotecaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,8 @@ namespace Biblioteca
             // 
             this.bibliotecaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.livrosToolStripMenuItem,
-            this.autoresToolStripMenuItem});
+            this.autoresToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.bibliotecaToolStripMenuItem.Name = "bibliotecaToolStripMenuItem";
             this.bibliotecaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.bibliotecaToolStripMenuItem.Text = "Biblioteca";
@@ -58,16 +60,23 @@ namespace Biblioteca
             // livrosToolStripMenuItem
             // 
             this.livrosToolStripMenuItem.Name = "livrosToolStripMenuItem";
-            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.livrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.livrosToolStripMenuItem.Text = "Livros";
             this.livrosToolStripMenuItem.Click += new System.EventHandler(this.livrosToolStripMenuItem_Click);
             // 
             // autoresToolStripMenuItem
             // 
             this.autoresToolStripMenuItem.Name = "autoresToolStripMenuItem";
-            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.autoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.autoresToolStripMenuItem.Text = "Autores";
             this.autoresToolStripMenuItem.Click += new System.EventHandler(this.autoresToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -95,5 +104,6 @@ namespace Biblioteca
         private System.Windows.Forms.ToolStripMenuItem bibliotecaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem livrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }
