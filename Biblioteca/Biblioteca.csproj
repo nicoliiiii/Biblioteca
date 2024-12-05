@@ -57,6 +57,9 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=9.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.9.1.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
       <HintPath>..\packages\MySqlConnector.2.4.0\lib\net471\MySqlConnector.dll</HintPath>
     </Reference>
@@ -122,11 +125,11 @@
     <Compile Include="DAO\DAOLivros.cs" />
     <Compile Include="Entidades\AutoresEntidade.cs" />
     <Compile Include="Entidades\LivrosEntidade.cs" />
-    <Compile Include="Forms\USUARIOS.cs">
+    <Compile Include="Forms\Cadastro\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\USUARIOS.Designer.cs">
-      <DependentUpon>USUARIOS.cs</DependentUpon>
+    <Compile Include="Forms\Cadastro\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Editar\EditarAutor.cs">
       <SubType>Form</SubType>
@@ -140,6 +143,12 @@
     <Compile Include="Forms\Editar\EditarLivro.Designer.cs">
       <DependentUpon>EditarLivro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Editar\EditarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Editar\EditarUsuarios.Designer.cs">
+      <DependentUpon>EditarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmAutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +160,12 @@
     </Compile>
     <Compile Include="Forms\frmLivros.Designer.cs">
       <DependentUpon>frmLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -166,8 +181,8 @@
     <EmbeddedResource Include="Forms\Cadastro\Livros.resx">
       <DependentUpon>Livros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\USUARIOS.resx">
-      <DependentUpon>USUARIOS.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Cadastro\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Editar\EditarAutor.resx">
       <DependentUpon>EditarAutor.cs</DependentUpon>
@@ -175,11 +190,17 @@
     <EmbeddedResource Include="Forms\Editar\EditarLivro.resx">
       <DependentUpon>EditarLivro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Editar\EditarUsuarios.resx">
+      <DependentUpon>EditarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAutores.resx">
       <DependentUpon>frmAutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmLivros.resx">
       <DependentUpon>frmLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

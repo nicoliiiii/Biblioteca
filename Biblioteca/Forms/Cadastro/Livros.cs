@@ -1,5 +1,6 @@
 ﻿using Biblioteca.DAO;
-using MySqlConnector;
+using MySql.Data.MySqlClient;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Biblioteca.Cadastro
         private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
         private MySqlConnection Conexao;
 
-        //
+        
         public Livros()
         {
             InitializeComponent();
