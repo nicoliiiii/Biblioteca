@@ -13,11 +13,16 @@ namespace Biblioteca
 {
     public partial class Login : Form
     {
-        private Login login;
+        private Biblioteca.Classes.Login login;
+   
+
+       
+
+
         public Login()
         {
             InitializeComponent();
-            login = new Login();
+            login = new Biblioteca.Classes.Login();
         }
 
        
