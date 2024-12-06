@@ -31,7 +31,7 @@ namespace Biblioteca
         {
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtLogar = new System.Windows.Forms.Button();
+            this.btnLogar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -50,15 +50,15 @@ namespace Biblioteca
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
             this.txtSenha.TabIndex = 1;
             // 
-            // txtLogar
+            // btnLogar
             // 
-            this.txtLogar.Location = new System.Drawing.Point(81, 168);
-            this.txtLogar.Name = "txtLogar";
-            this.txtLogar.Size = new System.Drawing.Size(75, 23);
-            this.txtLogar.TabIndex = 2;
-            this.txtLogar.Text = "Logar";
-            this.txtLogar.UseVisualStyleBackColor = true;
-            this.txtLogar.Click += new System.EventHandler(this.txtLogar_Click);
+            this.btnLogar.Location = new System.Drawing.Point(81, 168);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(75, 23);
+            this.btnLogar.TabIndex = 2;
+            this.btnLogar.Text = "Logar";
+            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // label1
             // 
@@ -85,11 +85,12 @@ namespace Biblioteca
             this.ClientSize = new System.Drawing.Size(239, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtLogar);
+            this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +100,7 @@ namespace Biblioteca
 
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Button txtLogar;
+        private System.Windows.Forms.Button btnLogar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

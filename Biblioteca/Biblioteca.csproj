@@ -104,9 +104,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\DAOLogin.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Usuarios.cs" />
     <Compile Include="DAO\DAOUsuarios.cs" />
-    <Compile Include="Entidades\Login.cs" />
     <Compile Include="Entidades\UsuarioEntidade.cs" />
     <Compile Include="Forms\Cadastro\Autor.cs">
       <SubType>Form</SubType>

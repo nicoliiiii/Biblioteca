@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca.Classes;
 
 namespace Biblioteca
 {
@@ -19,7 +20,13 @@ namespace Biblioteca
             login = new Login();
         }
 
-        private void txtLogar_Click(object sender, EventArgs e)
+       
+        private void FecharForm(object sender, FormClosedEventArgs e)
+        {
+            Visible = true;
+        }
+
+        private void btnLogar_Click(object sender, EventArgs e)
         {
             login.LOGIN = txtLogin.Text;
             login.SENHA = txtSenha.Text;
@@ -34,6 +41,11 @@ namespace Biblioteca
             {
                 MessageBox.Show("Usuário e senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

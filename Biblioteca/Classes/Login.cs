@@ -5,23 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Biblioteca.DAO
+namespace Biblioteca.Classes
 {
-    class DAOLogin
+   public class Login
     {
-        private string LinhaConexao = "Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;";
-        private MySqlConnection Conexao;
-        public DAOLogin()
+        private MySqlConnection Conexao = new MySqlConnection("Server=localhost;Database=bibliotecaescola;Uid=root;Pwd=;");
+        public string LOGIN { get; set; }
+        public string SENHA { get; set; }
+
+        public bool Logar()
         {
-            Conexao = new MySqlConnection(LinhaConexao);
-        }
-        public bool Logar(string LOGIN, string SENHA)
-        {
-            string query = "Select LOGIN, ID from USUARIOS where LOGIN = @login AND  SENHA = @senha";
+            string query = "Select LOGIN, ID from USUARIOS where SENHA = @senha AND LOGIN = @login";
             Conexao.Open();
             MySqlCommand comando = new MySqlCommand(query, Conexao);
-            comando.Parameters.Add(new MySqlParameter("@login", LOGIN));
             comando.Parameters.Add(new MySqlParameter("@senha", SENHA));
+            comando.Parameters.Add(new MySqlParameter("@login", LOGIN));
             MySqlDataReader resultado = comando.ExecuteReader();
 
             if (resultado.HasRows)
@@ -34,10 +32,7 @@ namespace Biblioteca.DAO
                 Conexao.Close();
                 return false;
             }
-
-
         }
+
     }
 }
-
-    
