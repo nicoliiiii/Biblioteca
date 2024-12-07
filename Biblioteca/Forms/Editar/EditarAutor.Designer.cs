@@ -39,25 +39,30 @@ namespace Biblioteca.Forms.Editar
             // 
             // txtNomeAutor
             // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(55, 153);
+            this.txtNomeAutor.Location = new System.Drawing.Point(82, 242);
+            this.txtNomeAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(95, 20);
+            this.txtNomeAutor.Size = new System.Drawing.Size(140, 26);
             this.txtNomeAutor.TabIndex = 0;
             // 
             // lblNomeAutor
             // 
             this.lblNomeAutor.AutoSize = true;
-            this.lblNomeAutor.Location = new System.Drawing.Point(52, 137);
+            this.lblNomeAutor.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.lblNomeAutor.Location = new System.Drawing.Point(78, 212);
+            this.lblNomeAutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNomeAutor.Name = "lblNomeAutor";
-            this.lblNomeAutor.Size = new System.Drawing.Size(77, 13);
+            this.lblNomeAutor.Size = new System.Drawing.Size(142, 29);
             this.lblNomeAutor.TabIndex = 1;
             this.lblNomeAutor.Text = "Nome do autor";
             // 
             // btnSalvarAutor
             // 
-            this.btnSalvarAutor.Location = new System.Drawing.Point(56, 190);
+            this.btnSalvarAutor.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnSalvarAutor.Location = new System.Drawing.Point(84, 299);
+            this.btnSalvarAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvarAutor.Name = "btnSalvarAutor";
-            this.btnSalvarAutor.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarAutor.Size = new System.Drawing.Size(112, 35);
             this.btnSalvarAutor.TabIndex = 2;
             this.btnSalvarAutor.Text = "Salvar";
             this.btnSalvarAutor.UseVisualStyleBackColor = true;
@@ -65,9 +70,11 @@ namespace Biblioteca.Forms.Editar
             // 
             // btnExcluirAutor
             // 
-            this.btnExcluirAutor.Location = new System.Drawing.Point(56, 219);
+            this.btnExcluirAutor.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnExcluirAutor.Location = new System.Drawing.Point(84, 344);
+            this.btnExcluirAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluirAutor.Name = "btnExcluirAutor";
-            this.btnExcluirAutor.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirAutor.Size = new System.Drawing.Size(112, 35);
             this.btnExcluirAutor.TabIndex = 5;
             this.btnExcluirAutor.Text = "Excluir";
             this.btnExcluirAutor.UseVisualStyleBackColor = true;
@@ -76,33 +83,38 @@ namespace Biblioteca.Forms.Editar
             // txtIdAutor
             // 
             this.txtIdAutor.Enabled = false;
-            this.txtIdAutor.Location = new System.Drawing.Point(56, 114);
+            this.txtIdAutor.Location = new System.Drawing.Point(84, 175);
+            this.txtIdAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtIdAutor.Name = "txtIdAutor";
-            this.txtIdAutor.Size = new System.Drawing.Size(94, 20);
+            this.txtIdAutor.Size = new System.Drawing.Size(139, 26);
             this.txtIdAutor.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 98);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label1.Location = new System.Drawing.Point(78, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.Size = new System.Drawing.Size(80, 29);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Id";
+            this.label1.Text = "Id Autor";
             // 
             // EditarAutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(198, 450);
+            this.ClientSize = new System.Drawing.Size(297, 692);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIdAutor);
             this.Controls.Add(this.btnExcluirAutor);
             this.Controls.Add(this.btnSalvarAutor);
             this.Controls.Add(this.lblNomeAutor);
             this.Controls.Add(this.txtNomeAutor);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarAutor";
             this.Text = "EditarAutor";
+            this.Load += new System.EventHandler(this.EditarAutor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

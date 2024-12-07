@@ -50,25 +50,30 @@ namespace Biblioteca.Forms.Editar
             // 
             // txtTituloLivro
             // 
-            this.txtTituloLivro.Location = new System.Drawing.Point(37, 128);
+            this.txtTituloLivro.Location = new System.Drawing.Point(56, 197);
+            this.txtTituloLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTituloLivro.Name = "txtTituloLivro";
-            this.txtTituloLivro.Size = new System.Drawing.Size(100, 20);
+            this.txtTituloLivro.Size = new System.Drawing.Size(148, 26);
             this.txtTituloLivro.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 112);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label1.Location = new System.Drawing.Point(51, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.Size = new System.Drawing.Size(134, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Titulo do Livro";
             // 
             // btnSalvarLivro
             // 
-            this.btnSalvarLivro.Location = new System.Drawing.Point(48, 372);
+            this.btnSalvarLivro.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnSalvarLivro.Location = new System.Drawing.Point(72, 578);
+            this.btnSalvarLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvarLivro.Name = "btnSalvarLivro";
-            this.btnSalvarLivro.Size = new System.Drawing.Size(74, 30);
+            this.btnSalvarLivro.Size = new System.Drawing.Size(111, 46);
             this.btnSalvarLivro.TabIndex = 2;
             this.btnSalvarLivro.Text = "Salvar";
             this.btnSalvarLivro.UseVisualStyleBackColor = true;
@@ -76,99 +81,118 @@ namespace Biblioteca.Forms.Editar
             // 
             // txtAutorId
             // 
-            this.txtAutorId.Location = new System.Drawing.Point(37, 167);
+            this.txtAutorId.Location = new System.Drawing.Point(56, 257);
+            this.txtAutorId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAutorId.Name = "txtAutorId";
-            this.txtAutorId.Size = new System.Drawing.Size(100, 20);
+            this.txtAutorId.Size = new System.Drawing.Size(148, 26);
             this.txtAutorId.TabIndex = 3;
             // 
             // txtAnoPubli
             // 
-            this.txtAnoPubli.Location = new System.Drawing.Point(37, 323);
+            this.txtAnoPubli.Location = new System.Drawing.Point(56, 503);
+            this.txtAnoPubli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAnoPubli.Name = "txtAnoPubli";
-            this.txtAnoPubli.Size = new System.Drawing.Size(100, 20);
+            this.txtAnoPubli.Size = new System.Drawing.Size(148, 26);
             this.txtAnoPubli.TabIndex = 5;
             // 
             // txtNumPag
             // 
-            this.txtNumPag.Location = new System.Drawing.Point(37, 284);
+            this.txtNumPag.Location = new System.Drawing.Point(56, 443);
+            this.txtNumPag.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNumPag.Name = "txtNumPag";
-            this.txtNumPag.Size = new System.Drawing.Size(100, 20);
+            this.txtNumPag.Size = new System.Drawing.Size(148, 26);
             this.txtNumPag.TabIndex = 6;
             // 
             // txtClassificacao
             // 
-            this.txtClassificacao.Location = new System.Drawing.Point(37, 245);
+            this.txtClassificacao.Location = new System.Drawing.Point(56, 383);
+            this.txtClassificacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClassificacao.Name = "txtClassificacao";
-            this.txtClassificacao.Size = new System.Drawing.Size(100, 20);
+            this.txtClassificacao.Size = new System.Drawing.Size(148, 26);
             this.txtClassificacao.TabIndex = 7;
             // 
             // txtGenero
             // 
-            this.txtGenero.Location = new System.Drawing.Point(37, 206);
+            this.txtGenero.Location = new System.Drawing.Point(56, 317);
+            this.txtGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(100, 20);
+            this.txtGenero.Size = new System.Drawing.Size(148, 26);
             this.txtGenero.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 307);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label3.Location = new System.Drawing.Point(51, 478);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.Size = new System.Drawing.Size(109, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Publicação";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 268);
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label4.Location = new System.Drawing.Point(45, 413);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.Size = new System.Drawing.Size(184, 29);
             this.label4.TabIndex = 11;
             this.label4.Text = "Numero de paginas";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 229);
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label5.Location = new System.Drawing.Point(43, 352);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 13);
+            this.label5.Size = new System.Drawing.Size(214, 29);
             this.label5.TabIndex = 12;
             this.label5.Text = "Classificação Indicativa";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 190);
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label6.Location = new System.Drawing.Point(51, 289);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.Size = new System.Drawing.Size(79, 29);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Genero";
+            this.label6.Text = "Gênero";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 151);
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label7.Location = new System.Drawing.Point(51, 227);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.Size = new System.Drawing.Size(144, 29);
             this.label7.TabIndex = 14;
             this.label7.Text = "Nome do Autor";
             // 
             // chkDisponivel
             // 
             this.chkDisponivel.AutoSize = true;
-            this.chkDisponivel.Location = new System.Drawing.Point(47, 349);
+            this.chkDisponivel.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.chkDisponivel.Location = new System.Drawing.Point(70, 544);
+            this.chkDisponivel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkDisponivel.Name = "chkDisponivel";
-            this.chkDisponivel.Size = new System.Drawing.Size(75, 17);
+            this.chkDisponivel.Size = new System.Drawing.Size(128, 33);
             this.chkDisponivel.TabIndex = 15;
             this.chkDisponivel.Text = "Disponivel";
             this.chkDisponivel.UseVisualStyleBackColor = true;
             // 
             // btnExcluirLivro
             // 
-            this.btnExcluirLivro.Location = new System.Drawing.Point(49, 408);
+            this.btnExcluirLivro.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnExcluirLivro.Location = new System.Drawing.Point(74, 628);
+            this.btnExcluirLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluirLivro.Name = "btnExcluirLivro";
-            this.btnExcluirLivro.Size = new System.Drawing.Size(74, 30);
+            this.btnExcluirLivro.Size = new System.Drawing.Size(111, 46);
             this.btnExcluirLivro.TabIndex = 16;
             this.btnExcluirLivro.Text = "Excluir";
             this.btnExcluirLivro.UseVisualStyleBackColor = true;
@@ -177,25 +201,28 @@ namespace Biblioteca.Forms.Editar
             // txtLivroId
             // 
             this.txtLivroId.Enabled = false;
-            this.txtLivroId.Location = new System.Drawing.Point(37, 89);
+            this.txtLivroId.Location = new System.Drawing.Point(56, 137);
+            this.txtLivroId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLivroId.Name = "txtLivroId";
-            this.txtLivroId.Size = new System.Drawing.Size(100, 20);
+            this.txtLivroId.Size = new System.Drawing.Size(148, 26);
             this.txtLivroId.TabIndex = 17;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 73);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label2.Location = new System.Drawing.Point(57, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(75, 29);
             this.label2.TabIndex = 18;
             this.label2.Text = "Id Livro";
             // 
             // EditarLivro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(205, 450);
+            this.ClientSize = new System.Drawing.Size(308, 692);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLivroId);
             this.Controls.Add(this.btnExcluirLivro);
@@ -213,8 +240,10 @@ namespace Biblioteca.Forms.Editar
             this.Controls.Add(this.btnSalvarLivro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTituloLivro);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarLivro";
             this.Text = "EditarLivro";
+            this.Load += new System.EventHandler(this.EditarLivro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -98,5 +98,10 @@ namespace Biblioteca.Forms.Editar
                 MessageBox.Show("Erro ao excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void EditarLivro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

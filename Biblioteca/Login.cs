@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Biblioteca.Classes;
+using Biblioteca.Forms;
+using Biblioteca.Forms.Cadastro;
 
 namespace Biblioteca
 {
@@ -44,13 +46,19 @@ namespace Biblioteca
             }
             else
             {
-                MessageBox.Show("Usuário e senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuário ou senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncadastrar_Click(object sender, EventArgs e)
+        {
+            Usuarios n = new Usuarios();
+            n.ShowDialog();
         }
     }
 }

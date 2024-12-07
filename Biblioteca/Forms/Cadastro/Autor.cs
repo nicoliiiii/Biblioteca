@@ -54,6 +54,10 @@ namespace Biblioteca.Cadastro
                 MessageBox.Show("Erro ao cadastrar", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-      
+
+        private void Autor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

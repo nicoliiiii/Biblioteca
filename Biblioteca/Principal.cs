@@ -40,5 +40,10 @@ namespace Biblioteca
             frmUsuarios u = new frmUsuarios();
             u.ShowDialog();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

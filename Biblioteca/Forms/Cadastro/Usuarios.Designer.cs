@@ -36,72 +36,100 @@ namespace Biblioteca.Forms.Cadastro
             this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsuarioId
             // 
+            this.txtUsuarioId.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtUsuarioId.Enabled = false;
-            this.txtUsuarioId.Location = new System.Drawing.Point(53, 108);
+            this.txtUsuarioId.Location = new System.Drawing.Point(80, 217);
+            this.txtUsuarioId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuarioId.Name = "txtUsuarioId";
-            this.txtUsuarioId.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuarioId.Size = new System.Drawing.Size(148, 26);
             this.txtUsuarioId.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 92);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(75, 193);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.Size = new System.Drawing.Size(28, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Id";
             // 
             // btnLogar
             // 
-            this.btnLogar.Location = new System.Drawing.Point(53, 231);
+            this.btnLogar.BackColor = System.Drawing.Color.LavenderBlush;
+            this.btnLogar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnLogar.Location = new System.Drawing.Point(80, 405);
+            this.btnLogar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogar.Name = "btnLogar";
-            this.btnLogar.Size = new System.Drawing.Size(75, 23);
+            this.btnLogar.Size = new System.Drawing.Size(112, 35);
             this.btnLogar.TabIndex = 2;
-            this.btnLogar.Text = "Logar";
-            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Text = "Cadastrar";
+            this.btnLogar.UseVisualStyleBackColor = false;
             this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // txtLoginUsuario
             // 
-            this.txtLoginUsuario.Location = new System.Drawing.Point(53, 151);
+            this.txtLoginUsuario.BackColor = System.Drawing.Color.LavenderBlush;
+            this.txtLoginUsuario.Location = new System.Drawing.Point(80, 283);
+            this.txtLoginUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
-            this.txtLoginUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtLoginUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtLoginUsuario.TabIndex = 4;
             // 
             // txtSenhaUsuario
             // 
-            this.txtSenhaUsuario.Location = new System.Drawing.Point(53, 195);
+            this.txtSenhaUsuario.BackColor = System.Drawing.Color.LavenderBlush;
+            this.txtSenhaUsuario.Location = new System.Drawing.Point(80, 351);
+            this.txtSenhaUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
-            this.txtSenhaUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtSenhaUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtSenhaUsuario.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 135);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label2.Location = new System.Drawing.Point(75, 252);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(61, 29);
             this.label2.TabIndex = 6;
             this.label2.Text = "Login";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 179);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label3.Location = new System.Drawing.Point(75, 321);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(70, 29);
             this.label3.TabIndex = 7;
             this.label3.Text = "Senha";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(73, 78);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 39);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Cadastrar";
+            // 
             // Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(206, 450);
+            this.ClientSize = new System.Drawing.Size(309, 466);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtSenhaUsuario);
@@ -109,6 +137,7 @@ namespace Biblioteca.Forms.Cadastro
             this.Controls.Add(this.btnLogar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuarioId);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.ResumeLayout(false);
@@ -125,5 +154,6 @@ namespace Biblioteca.Forms.Cadastro
         private System.Windows.Forms.TextBox txtSenhaUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -42,25 +42,30 @@ namespace Biblioteca.Forms.Editar
             // txtUsuarioId
             // 
             this.txtUsuarioId.Enabled = false;
-            this.txtUsuarioId.Location = new System.Drawing.Point(47, 73);
+            this.txtUsuarioId.Location = new System.Drawing.Point(70, 112);
+            this.txtUsuarioId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuarioId.Name = "txtUsuarioId";
-            this.txtUsuarioId.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuarioId.Size = new System.Drawing.Size(148, 26);
             this.txtUsuarioId.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 57);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label1.Location = new System.Drawing.Point(66, 86);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.Size = new System.Drawing.Size(98, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Id";
+            this.label1.Text = "Id usuario";
             // 
             // btnExcluirUsuario
             // 
-            this.btnExcluirUsuario.Location = new System.Drawing.Point(47, 258);
+            this.btnExcluirUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnExcluirUsuario.Location = new System.Drawing.Point(70, 377);
+            this.btnExcluirUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExcluirUsuario.Name = "btnExcluirUsuario";
-            this.btnExcluirUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluirUsuario.Size = new System.Drawing.Size(112, 35);
             this.btnExcluirUsuario.TabIndex = 2;
             this.btnExcluirUsuario.Text = "Excluir";
             this.btnExcluirUsuario.UseVisualStyleBackColor = true;
@@ -68,41 +73,49 @@ namespace Biblioteca.Forms.Editar
             // 
             // txtSenhaUsuario
             // 
-            this.txtSenhaUsuario.Location = new System.Drawing.Point(47, 170);
+            this.txtSenhaUsuario.Location = new System.Drawing.Point(70, 262);
+            this.txtSenhaUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
-            this.txtSenhaUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtSenhaUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtSenhaUsuario.TabIndex = 3;
             // 
             // txtLoginUsuario
             // 
-            this.txtLoginUsuario.Location = new System.Drawing.Point(47, 120);
+            this.txtLoginUsuario.Location = new System.Drawing.Point(70, 194);
+            this.txtLoginUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
-            this.txtLoginUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtLoginUsuario.Size = new System.Drawing.Size(148, 26);
             this.txtLoginUsuario.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 104);
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label2.Location = new System.Drawing.Point(66, 160);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(61, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Login";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(44, 154);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label3.Location = new System.Drawing.Point(66, 231);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(70, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Senha";
             // 
             // btnSalvarUsuario
             // 
-            this.btnSalvarUsuario.Location = new System.Drawing.Point(47, 216);
+            this.btnSalvarUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnSalvarUsuario.Location = new System.Drawing.Point(70, 332);
+            this.btnSalvarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSalvarUsuario.Name = "btnSalvarUsuario";
-            this.btnSalvarUsuario.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvarUsuario.Size = new System.Drawing.Size(112, 35);
             this.btnSalvarUsuario.TabIndex = 7;
             this.btnSalvarUsuario.Text = "Salvar";
             this.btnSalvarUsuario.UseVisualStyleBackColor = true;
@@ -110,9 +123,9 @@ namespace Biblioteca.Forms.Editar
             // 
             // EditarUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(209, 450);
+            this.ClientSize = new System.Drawing.Size(314, 692);
             this.Controls.Add(this.btnSalvarUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -121,6 +134,7 @@ namespace Biblioteca.Forms.Editar
             this.Controls.Add(this.btnExcluirUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsuarioId);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EditarUsuarios";
             this.Text = "EditarUsuarios";
             this.ResumeLayout(false);

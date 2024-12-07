@@ -34,13 +34,16 @@ namespace Biblioteca.Cadastro
             this.txtNomeAutor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAutorId = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(37, 185);
+            this.btnCadastrar.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.btnCadastrar.Location = new System.Drawing.Point(85, 384);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(100, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(150, 35);
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -49,49 +52,69 @@ namespace Biblioteca.Cadastro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 143);
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label1.Location = new System.Drawing.Point(80, 299);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome do Autor";
             // 
             // txtNomeAutor
             // 
-            this.txtNomeAutor.Location = new System.Drawing.Point(37, 159);
+            this.txtNomeAutor.Location = new System.Drawing.Point(85, 331);
+            this.txtNomeAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNomeAutor.Name = "txtNomeAutor";
-            this.txtNomeAutor.Size = new System.Drawing.Size(100, 20);
+            this.txtNomeAutor.Size = new System.Drawing.Size(148, 26);
             this.txtNomeAutor.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 104);
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.label3.Location = new System.Drawing.Point(80, 231);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(80, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Id Autor";
             // 
             // txtAutorId
             // 
             this.txtAutorId.Enabled = false;
-            this.txtAutorId.Location = new System.Drawing.Point(37, 120);
+            this.txtAutorId.Location = new System.Drawing.Point(85, 262);
+            this.txtAutorId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAutorId.Name = "txtAutorId";
             this.txtAutorId.ReadOnly = true;
-            this.txtAutorId.Size = new System.Drawing.Size(100, 20);
+            this.txtAutorId.Size = new System.Drawing.Size(148, 26);
             this.txtAutorId.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(78, 105);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 39);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cadastrar";
             // 
             // Autor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(196, 450);
+            this.ClientSize = new System.Drawing.Size(294, 465);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtAutorId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNomeAutor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Autor";
             this.Text = "Autor";
+            this.Load += new System.EventHandler(this.Autor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +127,6 @@ namespace Biblioteca.Cadastro
         private System.Windows.Forms.TextBox txtNomeAutor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAutorId;
+        private System.Windows.Forms.Label label2;
     }
 }
