@@ -72,7 +72,7 @@ namespace Biblioteca.Forms.Editar
         private void btnExcluirAutor_Click(object sender, EventArgs e)
         {
 
-            string query = "Delete from Autores WHERE AutorId= @autorid";
+            string query = "Delete from autores WHERE AutorId= @autorid";
 
             Conexao = new MySqlConnection(LinhaConexao);
             Conexao.Open();

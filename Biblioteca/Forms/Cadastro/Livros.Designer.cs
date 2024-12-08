@@ -29,6 +29,7 @@ namespace Biblioteca.Cadastro
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Livros));
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTituloLivro = new System.Windows.Forms.TextBox();
@@ -50,19 +51,21 @@ namespace Biblioteca.Cadastro
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.LavenderBlush;
             this.btnCadastrar.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.btnCadastrar.Location = new System.Drawing.Point(112, 623);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(172, 35);
+            this.btnCadastrar.Size = new System.Drawing.Size(172, 42);
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label1.Location = new System.Drawing.Point(108, 183);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -73,6 +76,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtTituloLivro
             // 
+            this.txtTituloLivro.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtTituloLivro.Location = new System.Drawing.Point(112, 211);
             this.txtTituloLivro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTituloLivro.Name = "txtTituloLivro";
@@ -82,18 +86,20 @@ namespace Biblioteca.Cadastro
             // chkDisponivel
             // 
             this.chkDisponivel.AutoSize = true;
+            this.chkDisponivel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.chkDisponivel.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.chkDisponivel.Location = new System.Drawing.Point(112, 578);
+            this.chkDisponivel.Location = new System.Drawing.Point(112, 577);
             this.chkDisponivel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkDisponivel.Name = "chkDisponivel";
             this.chkDisponivel.Size = new System.Drawing.Size(128, 33);
             this.chkDisponivel.TabIndex = 3;
             this.chkDisponivel.Text = "Disponivel";
-            this.chkDisponivel.UseVisualStyleBackColor = true;
+            this.chkDisponivel.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label2.Location = new System.Drawing.Point(105, 248);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -104,6 +110,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtGenero
             // 
+            this.txtGenero.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtGenero.Location = new System.Drawing.Point(112, 341);
             this.txtGenero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGenero.Name = "txtGenero";
@@ -112,6 +119,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtClassificacao
             // 
+            this.txtClassificacao.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtClassificacao.Location = new System.Drawing.Point(112, 405);
             this.txtClassificacao.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtClassificacao.Name = "txtClassificacao";
@@ -120,6 +128,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtNumPag
             // 
+            this.txtNumPag.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtNumPag.Location = new System.Drawing.Point(112, 472);
             this.txtNumPag.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNumPag.Name = "txtNumPag";
@@ -129,6 +138,7 @@ namespace Biblioteca.Cadastro
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label3.Location = new System.Drawing.Point(108, 313);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -140,6 +150,7 @@ namespace Biblioteca.Cadastro
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label4.Location = new System.Drawing.Point(104, 375);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -151,6 +162,7 @@ namespace Biblioteca.Cadastro
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label5.Location = new System.Drawing.Point(108, 442);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -163,6 +175,7 @@ namespace Biblioteca.Cadastro
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F);
             this.label6.Location = new System.Drawing.Point(108, 507);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -173,6 +186,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtAnoPubli
             // 
+            this.txtAnoPubli.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtAnoPubli.Location = new System.Drawing.Point(112, 538);
             this.txtAnoPubli.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAnoPubli.Name = "txtAnoPubli";
@@ -181,6 +195,7 @@ namespace Biblioteca.Cadastro
             // 
             // txtLivroId
             // 
+            this.txtLivroId.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtLivroId.Enabled = false;
             this.txtLivroId.Location = new System.Drawing.Point(112, 151);
             this.txtLivroId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -192,8 +207,9 @@ namespace Biblioteca.Cadastro
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F);
-            this.label7.Location = new System.Drawing.Point(108, 127);
+            this.label7.Location = new System.Drawing.Point(108, 118);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 29);
@@ -202,6 +218,7 @@ namespace Biblioteca.Cadastro
             // 
             // cbxAutor
             // 
+            this.cbxAutor.BackColor = System.Drawing.Color.LavenderBlush;
             this.cbxAutor.FormattingEnabled = true;
             this.cbxAutor.Location = new System.Drawing.Point(110, 281);
             this.cbxAutor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -212,6 +229,7 @@ namespace Biblioteca.Cadastro
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(203)))), ((int)(((byte)(211)))));
             this.label8.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(126, 46);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -224,6 +242,7 @@ namespace Biblioteca.Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(418, 692);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbxAutor);
@@ -242,6 +261,7 @@ namespace Biblioteca.Cadastro
             this.Controls.Add(this.txtTituloLivro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Livros";
             this.Text = "Livros";

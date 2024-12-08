@@ -103,5 +103,10 @@ namespace Biblioteca.Forms.Editar
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
